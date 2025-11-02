@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .card-wrapper {
+    @apply relative overflow-hidden bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl;
+  }
+
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(131, 58, 180, 0.7) 0deg,
+      rgba(252, 176, 69, 0.7) 90deg,
+      transparent 50deg
+    );
+    @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] animate-border-spin;
+  }
+
+  .card-content {
+    @apply w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] absolute bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl z-10;
+  }
+}

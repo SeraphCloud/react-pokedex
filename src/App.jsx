@@ -25,12 +25,21 @@ function App() {
   return (
     <>
       <Header />
-      <SearchBar
-        setWichPokemon={setWichPokemon}
-        handleSearch={handleSearch}
-        wichPokemon={wichPokemon}
-      />
-      <PokemonCard foundPokemon={foundPokemon} />
+      <div className="grid grid-cols-4 gap-4">
+        <SearchBar
+          className="col-span-4"
+          setWichPokemon={setWichPokemon}
+          handleSearch={handleSearch}
+          wichPokemon={wichPokemon}
+        />
+        <PokemonCard
+          className="col-span-2 row-span-2"
+          foundPokemon={foundPokemon}
+        />
+        <div className="col-span-1 bg-red-900 h-48">Placeholder 1</div>
+        <div className="col-span-1 bg-green-900 h-48">Placeholder 2</div>
+        <div className="col-span-1 bg-yellow-900 h-48">Placeholder 3</div>
+      </div>
     </>
   );
 }
