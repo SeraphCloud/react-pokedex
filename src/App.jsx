@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { getPokemonByName } from "./pokeServices";
+import { getPokemonByName } from "./PokeServices";
 import SearchBar from "./components/SearchBar";
 import Header from "./components/Header";
 import PokemonCard from "./components/PokemonCard";
+import EvolutionCard from "./components/EvolutionCard";
+import AbilitiesCard from "./components/AbilitiesCard";
+import RegionCard from "./components/RegionCard";
 
 function App() {
   const [wichPokemon, setWichPokemon] = useState("");
@@ -36,9 +39,18 @@ function App() {
           className="col-span-2 row-span-2"
           foundPokemon={foundPokemon}
         />
-        <div className="col-span-1 bg-red-900 h-48">Placeholder 1</div>
-        <div className="col-span-1 bg-green-900 h-48">Placeholder 2</div>
-        <div className="col-span-1 bg-yellow-900 h-48">Placeholder 3</div>
+        <EvolutionCard
+          className="col-span-1"
+          foundPokemon={foundPokemon}
+        />
+        <AbilitiesCard
+          className="col-span-1"
+          foundPokemon={foundPokemon}
+        />
+        <RegionCard
+          className="col-span-1"
+          foundPokemon={foundPokemon}
+        />
       </div>
     </>
   );
