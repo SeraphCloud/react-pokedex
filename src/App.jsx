@@ -3,6 +3,9 @@ import { getPokemonByName } from "./pokeServices";
 import SearchBar from "./components/SearchBar";
 import Header from "./components/Header";
 import PokemonCard from "./components/PokemonCard";
+import EvolutionCard from "./components/EvolutionCard";
+import AbilitiesCard from "./components/AbilitiesCard";
+import RegionCard from "./components/RegionCard";
 
 function App() {
   const [wichPokemon, setWichPokemon] = useState("");
