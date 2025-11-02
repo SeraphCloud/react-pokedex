@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getPokemonByName } from "./pokeServices";
+import { getPokemonByName } from "./PokeServices";
 import SearchBar from "./components/SearchBar";
 import Header from "./components/Header";
 import PokemonCard from "./components/PokemonCard";
